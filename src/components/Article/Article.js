@@ -31,9 +31,10 @@ export default class Article extends Component {
   }
   
   render() {
+    
     const loader = <div className="articleLoading"><i className='fa fa-spinner fa-spin' aria-hidden='true'></i></div>;
-    console.log(this.props.data);
     const { title, url, by, score } = this.props.data;
+
     return(
       <Layout className="hack-news">
         <Header title="Article">
@@ -43,7 +44,7 @@ export default class Article extends Component {
         </Header>
         <Card shadow={0} style={{width: '512px', margin: 'auto'}}>
             <CardTitle 
-                style={{color: '#fff', height: '176px', background: 'url(https://www.freewebheaders.com/wordpress/wp-content/gallery/artistic-abstract/colored-flare-beams-abstract-art-web-header.jpg)'}}>
+                style={{color: '#fff', height: '176px', background: 'url(../../../images/article-bg.jpg)'}}>
                 {title}
             </CardTitle>
             <CardText>by: {by}<span style={{float: 'right'}}>score: {score}</span></CardText>
